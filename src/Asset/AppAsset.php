@@ -21,6 +21,8 @@ class AppAsset extends AssetBundle
 
     public array $js = [
         'js/app.js',
+        'https://js.pusher.com/7.0/pusher.min.js',
+        'https://code.jquery.com/jquery-3.5.1.min.js'
     ];
 
     public array $depends = [

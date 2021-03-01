@@ -2,3 +2,53 @@ label.required:not(:empty):after {
     color: #dc3545;
     content: '\a0*';
 }
+
+.chat {
+    height: 70vh;
+}
+
+.chat-messages {
+    overflow-y: auto;
+}
+
+.chat-message {
+    border-radius: 0.3rem;
+    background: #f7f7f7;
+    border: 1px solid #d2d6de;
+    color: #444;
+    margin-top: 15px;
+    padding: 5px 10px;
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    min-width: 40%;
+    max-width: 80%;
+    font-family: verdana, geneva, lucida, "lucida grande", arial, helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.message-name {
+    font-weight: 600;
+    color: #6b97cd;
+}
+
+.message-text {
+    font-size: 0.9rem;
+}
+
+.message-timestamp {
+    float: right;
+    color: #bab1b1;
+}
+
+.message-template {
+    display: none;
+}
+
+.send-button {
+    margin-left: 15px;
+}
+
+.connection-status {
+    color: #14a3dc;
+}

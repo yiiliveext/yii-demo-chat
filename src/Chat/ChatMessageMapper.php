@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\User;
+namespace App\Chat;
 
 use Cycle\ORM\Command\ContextCarrierInterface;
 use Cycle\ORM\Command\Database\Update;
@@ -13,14 +13,14 @@ use Cycle\ORM\Mapper\Mapper;
 final class ChatMessageMapper extends Mapper
 {
     /**
-     * @param ChatMessageMapper $entity
+     * @param User $entity
      */
     public function queueUpdate($entity, Node $node, State $state): ContextCarrierInterface
     {
         /** @var Update $command */
         $command = parent::queueUpdate($entity, $node, $state);
 
-        $now = new \DateTimeImmutable();
+        $now = time();
 
         $state->register('updated_at', $now, true);
         $command->registerAppendix('updated_at', $now);

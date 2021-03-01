@@ -12,6 +12,7 @@ use App\Controller\ApiInfo;
 use App\Controller\AuthController;
 use App\Controller\SignupController;
 use App\Controller\SiteController;
+use App\Chat\ChatController;
 use App\User\Controller\ApiUserController;
 use App\Middleware\AccessChecker;
 use App\Middleware\ApiDataWrapper;
@@ -79,7 +80,7 @@ return [
         Route::methods([Method::GET, Method::POST], '/page/edit/{slug}', [PostController::class, 'edit'])
             ->name('blog/edit')
             ->addMiddleware(Authentication::class)
-            ->addMiddleware(fn (AccessChecker $checker) => $checker->withPermission('editPost')),
+            ->addMiddleware(fn(AccessChecker $checker) => $checker->withPermission('editPost')),
         // Post page
         Route::get('/page/{slug}', [PostController::class, 'index'])
             ->name('blog/post'),
@@ -106,7 +107,7 @@ return [
     // Swagger routes
     Group::create('/swagger', [
         Route::get('')
-            ->addMiddleware(fn (SwaggerUi $swaggerUi) => $swaggerUi->withJsonUrl('/swagger/json-url'))
+            ->addMiddleware(fn(SwaggerUi $swaggerUi) => $swaggerUi->withJsonUrl('/swagger/json-url'))
             ->addMiddleware(FormatDataResponseAsHtml::class)
             ->name('swagger/index'),
         Route::get('/json-url')
@@ -118,6 +119,18 @@ return [
                         '@src/Controller', // Path to API controllers
                     ]);
             })
+            ->addMiddleware(FormatDataResponseAsJson::class),
+    ]),
+
+    Group::create('/chat', [
+        Route::get('', [ChatController::class, 'index'])
+            ->name('chat/index'),
+        Route::post('/send-message', [ChatController::class, 'sendMessage'])
+            ->name('chat/send-message')
+            ->addMiddleware(Authentication::class)
+            ->addMiddleware(FormatDataResponseAsJson::class),
+        Route::get('/get-messages', [ChatController::class, 'getMessages'])
+            ->name('chat/get-messages')
             ->addMiddleware(FormatDataResponseAsJson::class),
     ]),
 ];
