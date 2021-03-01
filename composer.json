@@ -60,7 +60,9 @@
         "yiisoft/yii-event": "^3.0@dev",
         "yiisoft/yii-swagger": "^3.0@dev",
         "yiisoft/yii-view": "^3.0@dev",
-        "yiisoft/yii-web": "^3.0@dev"
+        "yiisoft/yii-web": "^3.0@dev",
+        "vlucas/phpdotenv": "*",
+        "pusher/pusher-php-server": "^5.0"
     },
     "require-dev": {
         "codeception/c3": "^2.6.0",
@@ -92,6 +94,7 @@
         },
         "config-plugin-output-dir": "runtime/build/config",
         "config-plugin": {
+            "env": "?.env",
             "common": "config/common/*.php",
             "params": [
                 "config/params.php",

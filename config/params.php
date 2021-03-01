@@ -68,10 +68,10 @@ return [
             ],
             'connections' => [
                 'sqlite' => [
-                    'driver' => \Spiral\Database\Driver\SQLite\SQLiteDriver::class,
-                    'connection' => 'sqlite:@runtime/database.db',
-                    'username' => '',
-                    'password' => '',
+                    'driver' => $_ENV['DB_DRIVER'] ?? \Spiral\Database\Driver\SQLite\SQLiteDriver::class,
+                    'connection' => $_ENV['DB_CONNECTION'] ?? 'sqlite:@runtime/database.db',
+                    'username' => $_ENV['DB_USERNAME'] ?? '',
+                    'password' => $_ENV['DB_PASSWORD'] ?? '',
                 ],
             ],
             // 'query-logger' => \Yiisoft\Yii\Cycle\Logger\StdoutQueryLogger::class,

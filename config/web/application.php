@@ -19,7 +19,7 @@ return [
                     ->withMiddlewares(
                         [
                             Router::class,
-                            CsrfMiddleware::class,
+                            //CsrfMiddleware::class,
                             SessionMiddleware::class,
                             ErrorCatcher::class,
                         ]
