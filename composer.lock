@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8780ca8e7a185e02085771201f6978d6",
+    "content-hash": "0330570625d97db4b6c609fe02fa1e72",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -7265,26 +7265,28 @@
         },
         {
             "name": "yiisoft/injector",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/injector.git",
-                "reference": "52672ebb25657e8eac5289a3ba5ca8bc93b1d1ab"
+                "reference": "8a74b9668e23002e6881f83d5302972a8511dabf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/injector/zipball/52672ebb25657e8eac5289a3ba5ca8bc93b1d1ab",
-                "reference": "52672ebb25657e8eac5289a3ba5ca8bc93b1d1ab",
+                "url": "https://api.github.com/repos/yiisoft/injector/zipball/8a74b9668e23002e6881f83d5302972a8511dabf",
+                "reference": "8a74b9668e23002e6881f83d5302972a8511dabf",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
-                "psr/container": "1.0.0"
+                "psr/container": "^1.0|^2.0"
             },
             "require-dev": {
-                "infection/infection": "^0.20.1",
-                "phan/phan": "^3.2",
-                "phpunit/phpunit": "^9.3"
+                "phpunit/phpunit": "^9.5",
+                "roave/infection-static-analysis-plugin": "^1.7",
+                "spatie/phpunit-watcher": "^1.23",
+                "vimeo/psalm": "^4.6",
+                "yiisoft/test-support": "^1.2"
             },
             "type": "library",
             "autoload": {
@@ -7322,7 +7324,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-05T13:37:23+00:00"
+            "time": "2021-03-10T19:11:37+00:00"
         },
         {
             "name": "yiisoft/json",
