@@ -62,7 +62,7 @@
         "yiisoft/yii-view": "^3.0@dev",
         "yiisoft/yii-web": "^3.0@dev",
         "vlucas/phpdotenv": "*",
-        "pusher/pusher-php-server": "^5.0"
+        "pusher/pusher-php-server": "^6.0"
     },
     "require-dev": {
         "codeception/c3": "^2.6.0",
