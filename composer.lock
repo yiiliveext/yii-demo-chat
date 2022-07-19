@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8780ca8e7a185e02085771201f6978d6",
+    "content-hash": "0330570625d97db4b6c609fe02fa1e72",
     "packages": [
         {
             "name": "alexkart/curl-builder",
@@ -7265,26 +7265,29 @@
         },
         {
             "name": "yiisoft/injector",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/injector.git",
-                "reference": "52672ebb25657e8eac5289a3ba5ca8bc93b1d1ab"
+                "reference": "e78a0da15625c59cc0969985bfa05f2ea1b6ddea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/injector/zipball/52672ebb25657e8eac5289a3ba5ca8bc93b1d1ab",
-                "reference": "52672ebb25657e8eac5289a3ba5ca8bc93b1d1ab",
+                "url": "https://api.github.com/repos/yiisoft/injector/zipball/e78a0da15625c59cc0969985bfa05f2ea1b6ddea",
+                "reference": "e78a0da15625c59cc0969985bfa05f2ea1b6ddea",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
-                "psr/container": "1.0.0"
+                "psr/container": "^1.0|^2.0"
             },
             "require-dev": {
-                "infection/infection": "^0.20.1",
-                "phan/phan": "^3.2",
-                "phpunit/phpunit": "^9.3"
+                "phpbench/phpbench": "^1.1",
+                "phpunit/phpunit": "^9.5",
+                "roave/infection-static-analysis-plugin": "^1.16",
+                "spatie/phpunit-watcher": "^1.23",
+                "vimeo/psalm": "^4.18",
+                "yiisoft/test-support": "^1.2"
             },
             "type": "library",
             "autoload": {
@@ -7297,7 +7300,7 @@
                 "BSD-3-Clause"
             ],
             "description": "PSR-11 compatible injector. Executes a callable and makes an instances by injecting dependencies from a given DI container.",
-            "homepage": "http://www.yiiframework.com/",
+            "homepage": "https://www.yiiframework.com/",
             "keywords": [
                 "PSR-11",
                 "dependency injection",
@@ -7306,11 +7309,12 @@
                 "reflection"
             ],
             "support": {
-                "forum": "http://www.yiiframework.com/forum/",
+                "chat": "https://t.me/yii3en",
+                "forum": "https://www.yiiframework.com/forum/",
                 "irc": "irc://irc.freenode.net/yii",
                 "issues": "https://github.com/yiisoft/injector/issues?state=open",
                 "source": "https://github.com/yiisoft/injector",
-                "wiki": "http://www.yiiframework.com/wiki/"
+                "wiki": "https://www.yiiframework.com/wiki/"
             },
             "funding": [
                 {
@@ -7322,7 +7326,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-11-05T13:37:23+00:00"
+            "time": "2022-07-18T15:18:30+00:00"
         },
         {
             "name": "yiisoft/json",
@@ -15018,5 +15022,5 @@
         "php": "^7.4|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }
